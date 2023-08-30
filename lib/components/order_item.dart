@@ -29,15 +29,19 @@ class _OrderItemState extends State<OrderItem> {
           Image(
             image: AssetImage(widget.imageURI),
             fit: BoxFit.cover,
+            height: 80,
+            width: 80,
           ),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 16.0),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: <Widget>[
-                Text(widget.itemTitle),
-                Text(widget.itemPrice),
-              ],
+          Expanded(
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 16.0),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: <Widget>[
+                  Text(widget.itemTitle),
+                  Text(widget.itemPrice),
+                ],
+              ),
             ),
           ),
           const Padding(
